@@ -2,11 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import * as RecipeAPI from './recipe-api';
 import { PrismaClient } from '@prisma/client';
-import { env } from 'process';
 
 const app = express ();
 const prismaClient = new PrismaClient();
-const port = process.env.PORT || 9001;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
